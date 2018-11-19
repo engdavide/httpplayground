@@ -17,7 +17,8 @@ app.get("/", function(req, res){
 
 app.post("/new", function(req, res){
     console.log("POST");
-    var newEntry = req.body;
+    console.log(req.body);
+    var newEntry = req.body.entry;
     var newData = {entry: newEntry};
     data.push(newData);
     res.redirect("/");
