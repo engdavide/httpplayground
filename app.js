@@ -4,7 +4,7 @@ var app = express();
 
 
 var data = [
-    {name: "test data"}
+    {entry: "test data"}
 
 ]
 
@@ -17,7 +17,8 @@ app.get("/", function(req, res){
 
 app.post("/new", function(req, res){
     console.log("POST");
-    var newData = req.body;
+    var newEntry = req.body;
+    var newData = {entry: newEntry};
     data.push(newData);
     res.redirect("/");
 });
