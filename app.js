@@ -15,6 +15,10 @@ app.get("/", function(req, res){
     res.render("landing", {data: data})
 });
 
+app.get("/new", function(req,res){
+    res.render("new");
+});
+
 app.post("/new", function(req, res){
     console.log("POST");
     console.log(req.body);
