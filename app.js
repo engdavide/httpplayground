@@ -21,6 +21,7 @@ app.get("/new", function(req,res){
 
 app.post("/new", function(req, res){
     console.log("POST");
+    console.log(req);
     console.log(req.body);
     var newEntry = req.body.entry;
     var newData = {entry: newEntry};
